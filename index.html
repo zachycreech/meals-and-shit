@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  load bootstrap and fontawesome  -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,22 +16,20 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
     <title>Meals and shit</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="title">ok</h1>
+    <!-- food container -->
+
+    <div class="foodContainer">
+      <h1 class="title" id="foodTitle"></h1>
       <img id="foodImg" src="" alt="" />
-      <h4 class="description">words</h4>
-      <h3>Select your protein</h3>
+      <p id="foodDescription" class="description"></p>
+      <h3>Select your Protein</h3>
       <div
         class="btn-group mr-2"
-        id="buttonGroup"
+        id="foodGroup"
         role="group"
         aria-label="First group"
       >
@@ -46,16 +46,13 @@
           Turkey
         </button>
         <button type="button" id="duck" class="btn btn-secondary">Duck</button>
-        <button type="button" id="vegetarian" class="btn btn-secondary">
-          Vegetarian
-        </button>
       </div>
       <br />
       <br />
       <textarea
-        id="inputText"
+        id="foodInput"
         placeholder="Input your ingredients seperated by commas"
-        cols="90"
+        cols="70"
         rows="3"
       ></textarea>
       <br />
@@ -63,8 +60,35 @@
         ><i class="fas fa-search"> Search</i></a
       >
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- drink container -->
 
+    <div class="drinkContainer">
+      <h1 id="drinkTitle" class="title"></h1>
+      <img id="drinkImage" src="" alt="" />
+      <p id="drinkDescription" class="description"></p>
+      <h3>Select your Alcohol</h3>
+      <div
+        class="btn-group mr-2"
+        id="drinkGroup"
+        role="group"
+        aria-label="First group"
+      >
+        <button type="button" id="gin" class="btn btn-secondary">Gin</button>
+        <button type="button" id="vodka" class="btn btn-secondary">
+          Vodka
+        </button>
+        <button type="button" id="tequila" class="btn btn-secondary">
+          Tequila
+        </button>
+        <button type="button" id="rum" class="btn btn-secondary">Rum</button>
+        <button type="button" id="whiskey" class="btn btn-secondary">
+          Whiskey
+        </button>
+      </div>
+    </div>
+    <!-- load jquery -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./javascript.js"></script>
   </body>
 </html>
