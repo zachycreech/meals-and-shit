@@ -10,8 +10,8 @@ const searchButton = $("#searchButton")
 const foodImg = $("#foodImg")
 const drinkImg = $("#drinkImage")
 const apiKey = "45fa1958465544f1a8f06e376252e2a6"
-let id
-// helper functions
+
+//hide images on load
 
 if (drinkImg.attr("src") === "") {
   drinkImg.addClass("hidden")
@@ -19,6 +19,8 @@ if (drinkImg.attr("src") === "") {
 if (foodImg.attr("src") === "") {
   foodImg.addClass("hidden")
 }
+
+//handle onclicks
 
 foodGroup.children().on("click", function () {
   for (let i = 0; i < foodGroup.children().length; i++) {
@@ -42,6 +44,8 @@ drinkGroup.children().on("click", function () {
   $(this).addClass("btn-primary")
   getDrink()
 })
+
+// get food requests and post
 
 const getRecipe = async function () {
   let foodGroupId
@@ -84,7 +88,11 @@ const postRecipe = function (title, image, instructions, summary) {
   console.log(summary)
 }
 
+// start the get request after search has been pressed
+
 searchButton.click(getRecipe)
+
+// get drinks and post them
 
 const getDrink = async function () {
   let id
